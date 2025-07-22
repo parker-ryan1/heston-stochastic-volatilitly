@@ -1,0 +1,57 @@
+{
+  "monte_carlo": {
+    "simulations": 100000,
+    "steps": 252,
+    "random_seed": 42
+  },
+  "heston": {
+    "discretization_scheme": "euler",
+    "enable_feller_check": true,
+    "variance_floor": 1e-8
+  },
+  "numerical": {
+    "tolerance": 1e-6,
+    "max_iterations": 1000
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "heston_model.log",
+    "console": true,
+    "file_output": true,
+    "max_files": 5,
+    "max_file_size_mb": 10
+  },
+  "performance": {
+    "enable_logging": true,
+    "enable_profiling": false,
+    "profile_memory": false
+  },
+  "threading": {
+    "enable_safety": true,
+    "max_threads": 8
+  },
+  "memory": {
+    "enable_profiling": false,
+    "max_usage_mb": 1024,
+    "enable_leak_detection": false
+  },
+  "vix": {
+    "scaling_factor": 100.0,
+    "averaging_days": 30
+  },
+  "risk": {
+    "var_confidence_95": 0.95,
+    "var_confidence_99": 0.99,
+    "enable_stress_testing": true
+  },
+  "market": {
+    "default_risk_free_rate": 0.05,
+    "default_dividend_yield": 0.0
+  },
+  "validation": {
+    "enable_parameter_checks": true,
+    "warn_extreme_values": true,
+    "max_volatility": 5.0,
+    "max_time_to_expiry": 30.0
+  }
+}
